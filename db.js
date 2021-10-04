@@ -2,11 +2,11 @@ const {Sequelize} = require('sequelize');
 
 module.exports = new Sequelize(
     'coodo',
-    'postgres',
+    'elio',
     'eliolooiz',
     {
-        host: '100.125.44.135',
-        port: '5432',
+        host: '212.41.23.165',
+        port: '6432',
         dialect: 'postgres'
     }
 )
