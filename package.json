@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ElioLooiz/coodo#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "telegraf": "^4.4.2"
+    "telegraf": "^4.4.2",
+    "telegram-bot-api": "^2.0.1"
   }
 }
