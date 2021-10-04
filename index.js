@@ -1,9 +1,7 @@
 require('dotenv').config()
-const TG = require('telegram-bot-api')
-const api = new TG({
-    token: process.env.BOT_TOKEN
-})
+const TG = require('node-telegram-bot-api')
+const bot = new TG(process.env.BOT_TOKEN , { polling: true })
 
-api.getMe()
-.then(console.log)
-.catch(console.err)
+bot.on('message', (msg) => {
+    console.log(msg);
+});
