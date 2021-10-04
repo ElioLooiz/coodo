@@ -18,7 +18,7 @@ const start = async () => {
         console.log(msg);
         const text = msg.text;
         const id = msg.chat.id;
-        bot.sendMessage(id, 'Лыч лох');
+        bot.sendMessage(id, 'тчтлен');
     });
 }
 
