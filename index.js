@@ -1,25 +1,14 @@
 require('dotenv').config()
-const sequelize = require('./db');
-const TG = require('node-telegram-bot-api')
-const bot = new TG(process.env.BOT_TOKEN , { polling: true })
+const { Telegraf } = require('telegraf')
+const { Sequelize } = require('sequelize')
 
+const bot = new Telegraf(process.env.BOT_TOKEN)
+bot.on('message', ctx => {
+    console.log(ctx.update.message.from)
+})
+bot.hears('hi', (ctx) => ctx.reply('Hey there'))
+bot.launch()
 
-
-const start = async () => {
-
-    try {
-        await sequelize.authenticate()
-        await sequelize.sync()
-    } catch (e) {
-        console.log('Подключение к бд сломалось', e)
-    }
-
-    bot.on('message', (msg) => {
-        console.log(msg);
-        const text = msg.text;
-        const id = msg.chat.id;
-        bot.sendMessage(id, 'тчтлен');
-    });
-}
-
-start()
+// // Enable graceful stop
+// process.once('SIGINT', () => bot.stop('SIGINT'))
+// process.once('SIGTERM', () => bot.stop('SIGTERM'))

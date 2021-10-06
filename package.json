@@ -20,11 +20,9 @@
   "homepage": "https://github.com/ElioLooiz/coodo#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "node-telegram-bot-api": "^0.54.0",
     "nodemon": "^2.0.13",
     "pg": "^8.7.1",
     "sequelize": "^6.6.5",
-    "telegraf": "^4.4.2",
-    "telegram-bot-api": "^2.0.1"
+    "telegraf": "^4.4.2"
   }
 }
