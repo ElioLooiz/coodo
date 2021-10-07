@@ -1,12 +1,6 @@
-const {Sequelize} = require('sequelize');
+const { Sequelize } = require('sequelize');
 
-module.exports = new Sequelize(
-    'coodo',
-    'elio',
-    'eliolooiz',
-    {
-        host: '212.41.23.165',
-        port: '6432',
-        dialect: 'postgres'
-    }
-)
+export const sequelize = new Sequelize('coodo', 'postgres', 'eliolooiz', {
+  host: 'localhost',
+  dialect: 'postgres'
+});
